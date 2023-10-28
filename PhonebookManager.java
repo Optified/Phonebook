@@ -47,11 +47,9 @@ public class PhonebookManager{
     }
     public void print(){
         Node temp = head;
-        System.out.println("This is the length of the list" + listLength);
         for(int i = 0; i < listLength; i++){
             System.out.println(temp);
             temp = head.getNext();
-            System.out.println("i for the print method: " + i);
         }
     }
     public void delete(int index){
@@ -60,9 +58,8 @@ public class PhonebookManager{
         }
         else{
             Node current = head;
-            for(int i = 0; i <= index - 1; i++){
+            for(int i = 0; i < index - 1; i++){
                 current = current.getNext();
-                System.out.println("i = " + i);
             }
             current.getNext();   
             current = current.getNext().getNext();
