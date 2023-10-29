@@ -48,6 +48,7 @@ public class PhonebookManager{
     public void print(){
         Node temp = head;
         for(int i = 0; i < listLength; i++){
+            System.out.print("Contact ID: " + (i+1));
             System.out.println(temp);
             temp = head.getNext();
         }
@@ -65,6 +66,34 @@ public class PhonebookManager{
             current = current.getNext().getNext();
         }
         listLength--;
+    }
+
+    public void edit(int index, int changeNum, String change){
+
+        Node current = head;
+        for(int i = 0; i < index - 1; i++){
+            current = current.getNext();
+        }
+        switch(changeNum){
+            case 1: current.setFirstName(change);
+            break;
+
+            case 2: current.setLastName(change);
+            break;
+
+            case 3: current.setCity(change);
+            break;
+
+            case 4: current.setNumber(change);
+            break;
+
+            case 5: current.setAddress(change);
+            break;
+
+            case 6:
+            break;
+        }
+        
     }
 
 

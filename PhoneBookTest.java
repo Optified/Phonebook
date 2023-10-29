@@ -59,6 +59,16 @@ public class PhoneBookTest {
             case "e": if(test == -1){
                 System.out.println("The phonebook is empty. There are no contacts to edit.");
             }
+            else{
+                System.out.println("Please input which contact # you want to edit: ");
+                intChoice = input.nextInt();
+                System.out.println("Please input which field you want to edit:\n1: First name\n2: Last Name\n3: City\n4: Number: \n5: Address\n6: Quit");
+                int choiceTwo = input.nextInt();
+
+                System.out.println("What is your input into this contact?");
+                choice = input.next();
+                phonebook.edit(intChoice, choiceTwo, choice);
+            }
             break;
 
             case "P": //print
